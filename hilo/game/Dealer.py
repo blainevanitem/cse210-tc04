@@ -8,12 +8,11 @@ class Dealer:
 
         pass
     def get_points(self):
-        if self.cards[0] > self.cards[1] and self.guess == "H":
+        if self.guess == True:
             return 100
-        elif self.cards[0] < self.cards[1] and self.guess == "L":
-            return 100
-        else:
-            return -75 
+        elif self.guess == False:
+            return -75
+        
         '''
         If True +100 points
         If False - 75 points

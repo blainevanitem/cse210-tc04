@@ -40,14 +40,14 @@ class Dealer:
 
         guess = input("will it be H/L")
         if guess.capitalize() == "H":
-            higher = self.card[0] + 1
-            if higher > self.card[0]:
+            higher = self.cards[0] + 1
+            if higher > self.cards[0]:
                 self.guess = True
             else:
                 self.guess = False
         if guess.capitalize() == "L":
-            lower = self.card[0] - 1
-            if lower > self.card[0]:
+            lower = self.cards[0] - 1
+            if lower > self.cards[0]:
                 self.guess = True
             else:
                 self.guess = False

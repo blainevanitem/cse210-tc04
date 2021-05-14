@@ -17,10 +17,10 @@ class Director:
         points = self.dealer.get_points()
         self.score += points
     def display_outputs(self):
-            print(f"the card is {dealer.cards[0]}")
+            print(f"the card is {self.dealer.cards[0]}")
             print(f"your points are {self.score}")
             self.can_play()
-        pass
+    
     #Determines if the score is 0 and the play is over, or if the player wants to continue play or not.
     def can_play(self):
         if(self.score == 0):

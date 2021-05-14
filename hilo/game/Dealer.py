@@ -51,3 +51,4 @@ class Dealer:
                 self.guess = True
             else:
                 self.guess = False
+        self.cards.pop(0)

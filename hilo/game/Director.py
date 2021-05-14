@@ -26,7 +26,7 @@ class Director:
         if(self.score <= 0):
             self.keep_playing = False
         else:
-            self.answer = input(print("Would you like to keep playing? [Yes/No]"))
+            self.answer = input("Would you like to keep playing? [Yes/No]")
             if(self.answer == "Yes" or self.answer == "yes"):
                 self.keep_playing = True
             else:

@@ -23,7 +23,7 @@ class Director:
     
     #Determines if the score is 0 and the play is over, or if the player wants to continue play or not.
     def can_play(self):
-        if(self.score == 0):
+        if(self.score <= 0):
             self.keep_playing = False
         else:
             self.answer = input(print("Would you like to keep playing? [Yes/No]"))

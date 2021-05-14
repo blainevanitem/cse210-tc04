@@ -1,3 +1,5 @@
+import random
+
 class Dealer:
     def __init__(self):
         self.cards = []
@@ -15,7 +17,14 @@ class Dealer:
         '''
         get 2 cards 
         '''
-        pass
+        if len(self.cards) == 0:
+            for card in range(0,2):
+                card = random.randint(1,13)
+                self.cards.append(card)
+        if len(self.cards) == 1:
+            card = random.randint(1,13)
+            self.cards.append(card)
+
     def get_guess(self):
         '''
         display card

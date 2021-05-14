@@ -38,16 +38,8 @@ class Dealer:
         print(f'your card is {self.cards[0]}')
 
         guess = input("will it be H/L")
-        if guess.capitalize() == "H":
-            higher = self.cards[0] + 1
-            if higher > self.cards[0]:
-                self.guess = True
-            else:
-                self.guess = False
-        if guess.capitalize() == "L":
-            lower = self.cards[0] - 1
-            if lower > self.cards[0]:
-                self.guess = True
-            else:
-                self.guess = False
+        if self.cards[0] < self.cards[1] and guess.capitalize() == "H" or self.cards[0] > self.cards[1] and guess.capitalize() == "L":
+            self.guess = True
+        else:
+            self.guess = False
         self.cards.pop(0)

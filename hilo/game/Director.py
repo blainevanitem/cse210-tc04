@@ -18,6 +18,7 @@ class Director:
 
         pass
     def can_play(self):
+            
         '''
         If score bad   
             keep_playing = False

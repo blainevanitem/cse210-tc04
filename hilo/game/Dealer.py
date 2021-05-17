@@ -1,6 +1,8 @@
 import random
 
 class Dealer:
+    '''This class will be the person who gives cars and guesses from the player.'''
+
     def __init__(self):
         self.cards = []
         self.guess = True
@@ -13,15 +15,9 @@ class Dealer:
         elif self.guess == False:
             return -75
         
-        '''
-        If True +100 points
-        If False - 75 points
-        return points
-        '''
     def deal_cards(self):
-        '''
-        get 2 cards 
-        '''
+        '''This gets 2 random cards from the dealer'''
+
         if len(self.cards) == 0:
             for card in range(0,2):
                 card = random.randint(1,13)
@@ -31,13 +27,11 @@ class Dealer:
             self.cards.append(card)
 
     def get_guess(self):
-        '''
-        display card
-        self.guess = input
-        '''
-        print(f'your card is {self.cards[0]}')
+        '''Gets the guess from the player of if the next card will be higher or lower.'''
 
-        guess = input("will it be H/L")
+        print(f'Your card is {self.cards[0]}')
+
+        guess = input("Will it be H/L?")
         if self.cards[0] < self.cards[1] and guess.capitalize() == "H" or self.cards[0] > self.cards[1] and guess.capitalize() == "L":
             self.guess = True
         else:
